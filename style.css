@@ -1,17 +1,19 @@
 *, 
 *::before, 
 *::after {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: goldenrod;
-}
-
-h1 {
     text-align: center;
+    background-color: goldenrod;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -20,9 +22,46 @@ h1 {
     margin: 0 auto;
 }
 
+/* Buttons */
+
+.btn__wrapper {
+    margin: 0 auto;
+    margin-top: 1em;
+    position: relative;
+}
+
+.btn {
+    border: 0;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 0.5em 1.125em;
+    background-color: darkcyan;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: hsl(180, 100%, 17%);
+}
+
+.start-btn {
+    display: block;
+}
+
+.restart-btn {
+    display: block;
+}
+
+/* Game Stats */
+
 .stats {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -31,22 +70,29 @@ h1 {
     max-width: 60px;
 }
 
+.stats p:first-child {
+    margin-right: 3em;
+}
+
 .stats span {
     font-weight: 600;
 }
 
+/* Game Components */
+
 .game-grid {
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border: 3px solid #000000;
+    background-color: burlywood;
 }
 
 .square {
     width: 20px;
     height: 20px;
-    border: 1px solid red;
 }
 
 .snake {
