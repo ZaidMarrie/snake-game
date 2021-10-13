@@ -31,17 +31,19 @@ body {
 }
 
 .btn {
+    margin-top: 1em;
     border: 0;
     cursor: pointer;
     color: #ffffff;
     border-radius: 5px;
     padding: 0.5em 1.125em;
     background-color: darkcyan;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     display: none;
+    font-weight: 700;
 }
 
 .btn:hover,
@@ -50,10 +52,6 @@ body {
 }
 
 .start-btn {
-    display: block;
-}
-
-.restart-btn {
     display: block;
 }
 
@@ -75,6 +73,7 @@ body {
 }
 
 .stats span {
+    display: block;
     font-weight: 600;
 }
 
@@ -99,6 +98,6 @@ body {
     background-color: green;
 }
 
-.apple {
+.food {
     background-color: blue;
 }
