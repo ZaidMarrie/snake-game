@@ -96,8 +96,34 @@ body {
 
 .snake {
     background-color: green;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.snake::after,
+.snake::before {
+    content: '';
+    position: absolute;
+    background: yellowgreen;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.snake::before {
+    top: 12px;
+    left: 6px;
+    width: 30%;
+    height: 50%;
+}
+
+.snake::after {
+    bottom: 12px;
+    right: 6px;
+    width: 30%;
+    height: 50%;
 }
 
 .food {
-    background-color: blue;
+    background-color: red;
 }

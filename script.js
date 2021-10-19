@@ -54,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
            ) {
                 startBtn.classList.add('start-btn');
                 return clearInterval(intervalId);
+                gridSquares.forEach(square => {
+                    square.classList.remove('snake');
+                })
         }
 
         const tail = snake.pop();
